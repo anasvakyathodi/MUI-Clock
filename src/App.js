@@ -86,17 +86,11 @@ function App() {
         direction="column"
         justify="space-between"
         fullWidth
-        style={{ height: "100vh" }}
+        style={{ height: `100%` }}
       >
         <Grid item>
           <FormControlLabel
-            control={
-              <Switch
-                checked={dark}
-                // size="large"
-                onChange={() => setDark(!dark)}
-              />
-            }
+            control={<Switch checked={dark} onChange={() => setDark(!dark)} />}
             label={dark ? "Dark" : "Light"}
             labelPlacement="top"
             style={{ marginTop: "2rem" }}
@@ -136,7 +130,12 @@ function App() {
   // };
   return (
     <ThemeProvider theme={dark ? DarkTheme : LightTheme}>
-      <Paper component="div" fullWidth square style={{ height: "100vh" }}>
+      <Paper
+        component="div"
+        fullWidth
+        square
+        style={{ height: `${window.innerHeight}px` }}
+      >
         {getClock()}
       </Paper>
     </ThemeProvider>

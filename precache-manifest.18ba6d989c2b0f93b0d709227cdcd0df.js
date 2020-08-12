@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "567873a87cb583fd85edfe6152ba2051",
+    "revision": "618d8fa1549e3f5edbd9e7a42582a253",
     "url": "/MUI-Clock/index.html"
   },
   {

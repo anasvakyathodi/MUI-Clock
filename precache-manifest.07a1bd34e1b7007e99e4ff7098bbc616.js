@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "034200f717844f0c2b01498da02e23bb",
+    "revision": "567873a87cb583fd85edfe6152ba2051",
     "url": "/MUI-Clock/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/MUI-Clock/static/js/2.1118b871.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f9ffaffe955356c15727",
-    "url": "/MUI-Clock/static/js/main.7fbaebfb.chunk.js"
+    "revision": "0823d714444e997af2d9",
+    "url": "/MUI-Clock/static/js/main.976e0211.chunk.js"
   },
   {
     "revision": "f78b2a4762c6f28580d2",

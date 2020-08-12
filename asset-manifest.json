@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/MUI-Clock/static/js/main.239fc4de.chunk.js",
-    "main.js.map": "/MUI-Clock/static/js/main.239fc4de.chunk.js.map",
+    "main.js": "/MUI-Clock/static/js/main.8284ae26.chunk.js",
+    "main.js.map": "/MUI-Clock/static/js/main.8284ae26.chunk.js.map",
     "runtime-main.js": "/MUI-Clock/static/js/runtime-main.3b923b9f.js",
     "runtime-main.js.map": "/MUI-Clock/static/js/runtime-main.3b923b9f.js.map",
-    "static/js/2.ff3bae4f.chunk.js": "/MUI-Clock/static/js/2.ff3bae4f.chunk.js",
-    "static/js/2.ff3bae4f.chunk.js.map": "/MUI-Clock/static/js/2.ff3bae4f.chunk.js.map",
+    "static/js/2.1118b871.chunk.js": "/MUI-Clock/static/js/2.1118b871.chunk.js",
+    "static/js/2.1118b871.chunk.js.map": "/MUI-Clock/static/js/2.1118b871.chunk.js.map",
     "index.html": "/MUI-Clock/index.html",
-    "precache-manifest.7725beaea1c6cd2331acfa59d4f75398.js": "/MUI-Clock/precache-manifest.7725beaea1c6cd2331acfa59d4f75398.js",
+    "precache-manifest.d3af0d7830e0030f40eed69e07dd36e8.js": "/MUI-Clock/precache-manifest.d3af0d7830e0030f40eed69e07dd36e8.js",
     "service-worker.js": "/MUI-Clock/service-worker.js",
-    "static/js/2.ff3bae4f.chunk.js.LICENSE.txt": "/MUI-Clock/static/js/2.ff3bae4f.chunk.js.LICENSE.txt"
+    "static/js/2.1118b871.chunk.js.LICENSE.txt": "/MUI-Clock/static/js/2.1118b871.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3b923b9f.js",
-    "static/js/2.ff3bae4f.chunk.js",
-    "static/js/main.239fc4de.chunk.js"
+    "static/js/2.1118b871.chunk.js",
+    "static/js/main.8284ae26.chunk.js"
   ]
 }

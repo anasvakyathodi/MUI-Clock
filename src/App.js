@@ -1,14 +1,26 @@
 import React, { useState, useEffect } from "react";
+import ReactGA from "react-ga";
 import {
   Paper,
   Typography,
   Switch,
   FormControlLabel,
   Grid,
-  CircularProgress,
+  // CircularProgress,
 } from "@material-ui/core";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
+const options = {
+  hour12: false,
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+};
+const getTime = () => {
+  return new Date().toLocaleString("en-US", options);
+};
+ReactGA.initialize("UA-168778602-8");
+ReactGA.pageview("/");
 function App() {
   const getMode = () => {
     const initialMode = localStorage.getItem("mode");
@@ -17,7 +29,7 @@ function App() {
       else return false;
     else return JSON.parse(initialMode);
   };
-  const [ready, setReady] = useState(false);
+  // const [ready, setReady] = useState(false);
   const [dark, setDark] = useState(getMode);
 
   useEffect(() => {
@@ -52,26 +64,15 @@ function App() {
     },
   });
 
-  const options = {
-    hour12: false,
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-  };
-
-  const getTime = () => {
-    return new Date().toLocaleString("en-US", options);
-  };
-
   const [clock, setClock] = useState(getTime());
 
   useEffect(() => {
     const intervalID = setInterval(() => setClock(getTime()), 1000);
-    document.onreadystatechange = function () {
-      if (document.readyState === "complete") {
-        setReady(true);
-      }
-    };
+    // document.onreadystatechange = function () {
+    //   if (document.readyState === "complete") {
+    //     setReady(true);
+    //   }
+    // };
     return () => {
       clearInterval(intervalID);
     };
@@ -89,10 +90,16 @@ function App() {
       >
         <Grid item>
           <FormControlLabel
-            control={<Switch checked={dark} onChange={() => setDark(!dark)} />}
+            control={
+              <Switch
+                checked={dark}
+                // size="large"
+                onChange={() => setDark(!dark)}
+              />
+            }
             label={dark ? "Dark" : "Light"}
             labelPlacement="top"
-            style={{ marginTop: "1.5rem" }}
+            style={{ marginTop: "2rem" }}
             color="primary"
           />
         </Grid>
@@ -102,7 +109,7 @@ function App() {
           </Typography>
         </Grid>
         <Grid item>
-          <Typography color="primary" style={{ marginBottom: "1.5rem" }}>
+          <Typography color="primary" style={{ marginBottom: "2rem" }}>
             {new Date().toLocaleDateString("en-US", {
               weekday: "long",
             })}
@@ -111,26 +118,26 @@ function App() {
       </Grid>
     );
   };
-  const goLoading = () => {
-    return (
-      <Grid
-        container
-        spacing={0}
-        direction="column"
-        alignItems="center"
-        justify="center"
-        style={{ minHeight: "100vh" }}
-      >
-        <Grid item>
-          <CircularProgress color="primary" />
-        </Grid>
-      </Grid>
-    );
-  };
+  // const goLoading = () => {
+  //   return (
+  //     <Grid
+  //       container
+  //       spacing={0}
+  //       direction="column"
+  //       alignItems="center"
+  //       justify="center"
+  //       style={{ minHeight: "100vh" }}
+  //     >
+  //       <Grid item>
+  //         <CircularProgress color="primary" />
+  //       </Grid>
+  //     </Grid>
+  //   );
+  // };
   return (
     <ThemeProvider theme={dark ? DarkTheme : LightTheme}>
       <Paper component="div" fullWidth square style={{ height: "100vh" }}>
-        {ready ? getClock() : goLoading()}
+        {getClock()}
       </Paper>
     </ThemeProvider>
   );

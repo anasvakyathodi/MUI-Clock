@@ -134,8 +134,9 @@ function App() {
         component="div"
         fullWidth
         square
-        style={{ height: `${window.innerHeight}px` }}
+        style={{ height: `${window.innerHeight}px`, transition: "all 0.5s linear" }}
       >
+
         {getClock()}
       </Paper>
     </ThemeProvider>
